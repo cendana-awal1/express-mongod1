@@ -4,7 +4,9 @@ import cors from "cors";
 import UserRoute from "./routes/UserRoute.js";
 
 const app = express();
-mongoose.connect('mongodb://localhost:27017/fullstack_db',{
+const URI = "mongodb://localhost:27017/fullstack_db";
+const urlMongo ="mongodb+srv://awalmakka:awalmakka@cluster0.v86wgfg.mongodb.net/test?retryWrites=true&w=majority";
+mongoose.connect(urlMongo,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
